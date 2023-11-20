@@ -162,11 +162,7 @@ namespace Qv2ray::core::config
             }
             else
             {
-#if defined(Q_OS_WIN) && !defined(QV2RAY_NO_ASIDECONFIG)
-                configPath = currentPathConfig;
-#else
                 configPath = configQv2ray;
-#endif
             }
 
             bool hasPossibleNewLocation = QDir().mkpath(configPath) && CheckSettingsPathAvailability(configPath, false);
